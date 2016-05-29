@@ -9,7 +9,13 @@ module Rulers
       klass, action = get_controller_and_action(env)
       controller = klass.new(env)
       response = controller.send(action)
-      [200, {"content-type" => "text/html"}, [response]]
+      # if controller.get_response
+      #   controller.get_response
+      # else
+      #   controller.render(action)
+      #   controller.get_response
+        #[200, {"content-type" => "text/html"}, [response]]
+      # end
     end
   end
 end
