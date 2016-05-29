@@ -15,6 +15,6 @@ class Rulers::Controller
 
   def controller_name
     klass = self.class.to_s.gsub(/Controller$/, "")
-    Rulers.to_underscore klass
+    klass.to_underscore 
   end
 end
